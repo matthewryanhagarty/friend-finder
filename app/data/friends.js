@@ -2,74 +2,29 @@ var musiciansList = [
     {
         name: "Matthew Ryan Hagarty",
         about: "Drummer for Fritz Montana / is just one guy & is having a good time",
-        mcdonalds: 5,
-        party: 5,
-        popPunk: 5,
-        best: 5,
-        jokes: 5,
-        tune: 1, 
-        artistic: 5,
-        coffee: 5,
-        drummer: 5,
-        introExtro: 3,
+        options: [5, 5, 5, 5, 5, 1, 5, 5, 5, 3]
     },
     {
         name: "Zachary Scott Carothers",
         about: "bassist for Portugal. The Man/ party animal",
-        mcdonalds: 3,
-        party: 5,
-        popPunk: 4,
-        best: 4,
-        jokes: 3,
-        tune: 4, 
-        artistic: 5,
-        coffee: 4,
-        drummer: 4,
-        introExtro: 4,
+        options: [3, 5, 4, 4, 3, 4, 5, 4, 4, 4]
     },
-    {
+    {   
         name: "John Balwin Gourley",
         about: "Guitarist & Vocalist for Portugal. The Man/ quiet, but actions speak louder than words",
-        mcdonalds: 1,
-        party: 3,
-        popPunk: 3,
-        best: 3,
-        jokes: 4,
-        tune: 5, 
-        artistic: 5,
-        coffee: 3,
-        drummer: 5,
-        introExtro: 1,
+        scores: [1, 3, 3, 3, 4, 5, 5, 3, 5, 1]
     },
-    {
+    {    
         name: "Kevin Carlin Logan",
         about: "Bassist for Fritz Montana/ huge nerd, but extremely intelligent",
-        mcdonalds: 3,
-        party: 3,
-        popPunk: 3,
-        best: 4,
-        jokes: 5,
-        tune: 3, 
-        artistic: 3,
-        coffee: 2,
-        drummer: 3,
-        introExtro: 2,
+        options: [3, 3, 3, 4, 5, 3, 3, 2, 3, 2]
     },
-    {
+    {  
         name: "Daniel Markowitz",
         about: "Keys for Locus Pocus/ the best musician in the band, but also the most humble",
-        mcdonalds: 2,
-        party: 2,
-        popPunk: 3,
-        best: 5,
-        jokes: 3,
-        tune: 2, 
-        artistic: 3,
-        coffee: 4,
-        drummer: 5,
-        introExtro: 2,
+        options: [2, 2, 3, 5, 3, 2, 3, 4, 5, 2]
     },
-
 ];
+
 
 module.exports = musiciansList;

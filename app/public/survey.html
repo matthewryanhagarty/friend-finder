@@ -112,75 +112,75 @@
                     </select>
                 <br>
                 <h3>Question 5:</h3>
-                <p>How bad are your jokes?</p>
+                <p>How bad are your jokes? (1 being "pretty good jokes" & 5 being "the worst jokes")</p>
                 <div class="form-group">
                     <label for="exampleFormControlSelect1">. select an answer .</label>
                     <select class="form-control" id="exampleFormControlSelect5">
-                        <option>1 (pretty good jokes)</option>
+                        <option>1</option>
                         <option>2</option>
                         <option>3</option>
                         <option>4</option>
-                        <option>5 (the worst jokes)</option>
+                        <option>5</option>
                     </select>
                 <br>
                 <h3>Question 6:</h3>
-                <p>How is your tone?</p>
+                <p>How well can you sing in tune? (1 being "please stop now" & 5 being "butter")</p>
                 <div class="form-group">
                     <label for="exampleFormControlSelect1">. select an answer .</label>
                     <select class="form-control" id="exampleFormControlSelect6">
-                        <option>1 (tone?)</option>
+                        <option>1</option>
                         <option>2</option>
                         <option>3</option>
                         <option>4</option>
-                        <option>5 (mad pedal board)</option>
+                        <option>5</option>
                     </select>
                 <br>
                 <h3>Question 7:</h3>
-                <p>How artistic are you?</p>
+                <p>How artistic are you? (1 being "i dabble" & 5 being "savant")</p>
                 <div class="form-group">
                     <label for="exampleFormControlSelect1">. select an answer .</label>
                     <select class="form-control" id="exampleFormControlSelect7">
-                        <option>1 (i dabble)</option>
+                        <option>1</option>
                         <option>2</option>
                         <option>3</option>
                         <option>4</option>
-                        <option>5 (savant)</option>
+                        <option>5</option>
                     </select>
                 <br>
                 <h3>Question 8:</h3>
-                <p>How much coffee do you consume?</p>
+                <p>How much coffee do you consume? (1 being "just a Starbucks on occasion" & 5 being "french press. ONLY french press")</p>
                 <div class="form-group">
                     <label for="exampleFormControlSelect1">. select an answer .</label>
                     <select class="form-control" id="exampleFormControlSelect8">
-                        <option>1 (just a Starbucks on occasion)</option>
+                        <option>1</option>
                         <option>2</option>
                         <option>3</option>
                         <option>4</option>
-                        <option>5 (french press. ONLY french press)</option>
+                        <option>5</option>
                     </select>
                 <br>
                 <h3>Question 9:</h3>
-                <p>How likely are you to step back and let the drummer shine for once?</p>
+                <p>How likely are you to step back and let the drummer shine for once? (1 being "not likely" & 5 being "i'm nothing w/o the drums")</p>
                 <div class="form-group">
                     <label for="exampleFormControlSelect1">. select an answer .</label>
                     <select class="form-control" id="exampleFormControlSelect9">
-                        <option>1 (not likely)</option>
+                        <option>1</option>
                         <option>2</option>
                         <option>3</option>
                         <option>4</option>
-                        <option>5 (i'm nothing w/o the drums)</option>
+                        <option>5</option>
                     </select>
                 <br>
                 <h3>Question 10:</h3>
-                <p>Are you introverted or extroverted?</p>
+                <p>Are you introverted or extroverted? (1 being "inside all day" & 5 being "outside all day")</p>
                 <div class="form-group">
                     <label for="exampleFormControlSelect1">. select an answer .</label>
                     <select class="form-control" id="exampleFormControlSelect10">
-                        <option>1 (inside all day)</option>
+                        <option>1</option>
                         <option>2</option>
                         <option>3</option>
                         <option>4</option>
-                        <option>5 (outside all day)</option>
+                        <option>5</option>
                     </select>
                 <br>
                 <br>
@@ -201,27 +201,27 @@
 $(".card").hide();
 $("#main").show();
 
-var questionsArray = ["1. How likely are you to eat McDonalds at 1:00 AM?", "2. How hard can you party?","3. How pop punk are you?","4. Are you secretly the best musician in your band?","5. How bad are your jokes?","6. How well do you sing in tune?", "7. How artistic are you?","8. How much coffee do you consume?", "9. How likely are you to step back and let the drummer shine for once?", "10. Are you introverted or extroverted?"];
-
-
 
 $("#submit").on("click", function(event) {
 
     event.preventDefault();
 
-var newMusician = {
+var newMusician =
+{
     name: $("#name").val().trim(),
     about: $("#about").val().trim(),
-    mcdonalds: $("#exampleFormControlSelect1").val(),
-    party: $("#exampleFormControlSelect2").val(),
-    popPunk: $("#exampleFormControlSelect3").val(),
-    best: $("#exampleFormControlSelect4").val(),
-    jokes: $("#exampleFormControlSelect5").val(),
-    tone: $("#exampleFormControlSelect6").val(),
-    artistic: $("#exampleFormControlSelect7").val(),
-    coffee: $("#exampleFormControlSelect8").val(),
-    drummer: $("#exampleFormControlSelect9").val(),
-    introExtro: $("#exampleFormControlSelect10").val(),
+    options: [
+                $("#exampleFormControlSelect1").val(),
+                $("#exampleFormControlSelect2").val(),
+                $("#exampleFormControlSelect3").val(),
+                $("#exampleFormControlSelect4").val(),
+                $("#exampleFormControlSelect5").val(),
+                $("#exampleFormControlSelect6").val(),
+                $("#exampleFormControlSelect7").val(),
+                $("#exampleFormControlSelect8").val(),
+                $("#exampleFormControlSelect9").val(),
+                $("#exampleFormControlSelect10").val(),
+            ],
 };
 
 $(".card").show();
