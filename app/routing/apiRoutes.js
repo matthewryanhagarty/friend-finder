@@ -9,30 +9,42 @@ app.get("/api/musicians", function(req, res) {
 
 app.post("/api/musicians", function(req, res) {
 
-    musiciansList.push(req.body)
     res.json(true);
 
+    var newMusician = req.body.options;
+
+    // console.log(newMusician);
+
+    var difference=[]
 
     for (var i = 0; i < musiciansList.length; i++) {
 
         // console.log(musiciansList[i].options)
         var sum = 0;
 
+        // console.log( sum )
         for (var j = 0; j < musiciansList[i].options.length; j++) {
             
-            // console.log(musiciansList[i].options[j])
+            // console.log(newMusician[j])
 
-            sum = sum + musiciansList[i].options[j];
-        
-            
+            // sum = sum + musiciansList[i].options[j];
+
+             sum = sum + Math.abs(parseInt(newMusician[j]) - parseInt(musiciansList[i].options[j]));
+
         }
+        difference.push({diff:sum,name:musiciansList[i].name});
+        // console.log(difference);
 
+        difference.sort(function(a, b) {return a.diff-b.diff});
     }             
-
     // console.log(musiciansList[i][j])
-    console.log(sum)
+    // console.log(sum)
+    // console.log(difference);
 
-res.json();   //whatever i am sending goes inside json(). 
+    musiciansList.push(req.body)
+
+res.json(difference[0]);
+console.log(difference[0])
 
 })
 };
