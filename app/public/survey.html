@@ -22,23 +22,22 @@
 <body>
     <div class="container">
         <div class="row">
-            <div class="col-12" id="ham-sandwich">
-                <!-- <img id="ham-sandwich" src="../assets/images/ham-sandwich.jpg"> -->
-                <h1>. T H E . W H O .</h1>
+                <div class="col-12 pt-5" id="ham-sandwich">
+                <img src="../assets/images/hagman2.jpg" alt="matthew hagarty" style="text-align: center">
+                <h1 id="the-who">. T H E . W H O .</h1>
                 <h6>. which musican are you most like .</h6>
             </div>
         </div>
     </div>
     <br>
-    <br>
-    <!-- <div class="container">
+    <div class="container">
         <div class="row">
             <div class="col-12">
                 <div class="card text-center">
                     <div class="card-header">y o u . a r e :</div>
                         <div class="card-body">
-                            <div class="card-title"><span id="title"></span></div>
-                            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                            <h3 class="card-title"><span id="title"></span></h3>
+                            <p class="card-text"><span id="about"></span></p>
                             <a href="/" class="btn btn-primary">. r u n . h o m e . j a c k .</a>
                         </div>
                         <div class="card-footer text-muted">
@@ -46,7 +45,7 @@
                     </div>
             </div>
         </div>
-    </div> -->
+    </div>
     <div class="container" id="main">
         <div class="row">
             <div class="col-12">
@@ -219,10 +218,11 @@ $("#main").hide();
 $.post("/api/musicians", newMusician, function(data) {
 
 //MODAL
-// if (data) {
-// $(".title").html(difference[0].name)
-// }
-
+if (data) {
+$("#title").text(data.name);
+$("#about").text(data.about)
+}
+// console.log(data)
 
 });
 
