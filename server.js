@@ -2,7 +2,7 @@ var express = require("express");
 
 var app = express();
 
-var PORT = process.envPORT || 8080;
+var PORT = process.env.PORT || 4040;
 
 app.use(express.static("app"));
 app.use(express.urlencoded({ extended: true}));
@@ -13,5 +13,5 @@ require("./app/routing/apiRoutes")(app);
 require("./app/routing/htmlRoutes")(app);
 
 app.listen(PORT, function() {
-    console.log("App listening on PORT: http://localhost:" + PORT +"/");
+    console.log("App listening on PORT " + PORT);
 });
