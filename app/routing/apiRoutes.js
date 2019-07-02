@@ -9,8 +9,6 @@ app.get("/api/musicians", function(req, res) {
 
 app.post("/api/musicians", function(req, res) {
 
-    // res.json(true);
-
     var newMusician = req.body.options;
 
     // console.log(newMusician);

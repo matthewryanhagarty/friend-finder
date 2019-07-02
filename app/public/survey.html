@@ -37,7 +37,7 @@
                     <div class="card-header">y o u . a r e :</div>
                         <div class="card-body">
                             <h3 class="card-title"><span id="title"></span></h3>
-                            <p class="card-text"><span id="about"></span></p>
+                            <p class="card-text"><span id="about2"></span></p>
                             <a href="/" class="btn btn-primary">. r u n . h o m e . j a c k .</a>
                         </div>
                         <div class="card-footer text-muted">
@@ -54,14 +54,15 @@
                         <span class="input-group-text" id="inputGroup-sizing-default">Full Name:</span>
                     </div>
                     <input type="text" id="name" class="form-control" aria-label="Sizing example, input" aria-describedby="inputGroup-sizing-default">
-                    </div>
+                </div>
                 <br>
-                <div class="input-group mb-3">
+                <div class="input-group mb-3"> 
                     <div class="input-group-prepend">
-                        <span class="input-group-text" id="inputGroup-sizing-default">Tell Us Something About You:</span>
+                        <span class="input-group-text" id="inputGroup-sizing-default">About You:</span>
                     </div>
-                    <input type="text" id="about" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
-                    </div>
+                    <input type="text" id="about" class="form-control" aria-label="Sizing example, input" aria-describedby="inputGroup-sizing-default">
+                </div>
+                <br>
                 <h3>Question 1:</h3>
                 <p>How likely are you to eat McDonalds at 1:00 AM? (1 being "not likely" & 5 being "always")</p>
                 <div class="form-group">
@@ -201,6 +202,7 @@ $(".card").hide();
 $("#main").show();
 
 $("#submit").on("click", function(event) {
+
     event.preventDefault();
 
 var newMusician =
@@ -217,7 +219,7 @@ $.post("/api/musicians", newMusician, function(data) {
 
 if (data) {
 $("#title").text(data.name);
-$("#about").text(data.about)
+$("#about2").text(data.about)
 }
 
 
