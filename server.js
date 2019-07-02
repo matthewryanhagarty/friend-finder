@@ -2,7 +2,7 @@ var express = require("express");
 
 var app = express();
 
-var PORT = process.env.PORT || 4040;
+var PORT = process.env.PORT || 5002;
 
 app.use(express.static("app"));
 app.use(express.urlencoded({ extended: true}));

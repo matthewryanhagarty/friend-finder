@@ -49,7 +49,7 @@
     <div class="container" id="main">
         <div class="row">
             <div class="col-12">
-                <div class="input-group mb-3">
+                <div class="input-group mb-3"> 
                     <div class="input-group-prepend">
                         <span class="input-group-text" id="inputGroup-sizing-default">Full Name:</span>
                     </div>
@@ -58,7 +58,7 @@
                 <br>
                 <div class="input-group mb-3">
                     <div class="input-group-prepend">
-                        <span class="input-group-text" id="inputGroup-sizing-default about">Tell Us Something About You:</span>
+                        <span class="input-group-text" id="inputGroup-sizing-default">Tell Us Something About You:</span>
                     </div>
                     <input type="text" id="about" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
                     </div>
@@ -183,7 +183,7 @@
                     </select>
                 <br>
                 <br>
-                <button type="button" id="submit" class="btn btn-light btn-lg">. submit .</button>
+                <button type="button" id="submit" class="btn btn-secondary btn-lg">. submit .</button>
 
             </div>
         </div>
@@ -200,9 +200,7 @@
 $(".card").hide();
 $("#main").show();
 
-
 $("#submit").on("click", function(event) {
-
     event.preventDefault();
 
 var newMusician =
@@ -217,12 +215,11 @@ $("#main").hide();
 
 $.post("/api/musicians", newMusician, function(data) {
 
-//MODAL
 if (data) {
 $("#title").text(data.name);
 $("#about").text(data.about)
 }
-// console.log(data)
+
 
 });
 
