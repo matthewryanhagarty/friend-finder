@@ -30,7 +30,7 @@ app.post("/api/musicians", function(req, res) {
              sum = sum + Math.abs(parseInt(newMusician[j]) - parseInt(musiciansList[i].options[j]));
 
         }
-        difference.push({diff:sum,name:musiciansList[i].name, about:musiciansList[i].about});
+        difference.push({diff:sum,name:musiciansList[i].name, about:musiciansList[i].about, photo:musiciansList[i].photo});
         // console.log(difference);
 
     }             

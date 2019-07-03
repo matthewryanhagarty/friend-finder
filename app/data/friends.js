@@ -16,6 +16,7 @@ var musiciansList = [
     },
     {    
         name: "Kevin Carlin Logan",
+        photo: "../assets/images/kevin1.jpg",
         about: "Bassist for Fritz Montana/ huge nerd, but extremely intelligent",
         options: [3, 3, 3, 4, 5, 3, 3, 2, 3, 2],
     },
@@ -25,6 +26,8 @@ var musiciansList = [
         options: [2, 2, 3, 5, 3, 2, 3, 4, 5, 2],
     },
 ];
+
+
 
 
 module.exports = musiciansList;

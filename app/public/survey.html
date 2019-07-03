@@ -38,10 +38,13 @@
                         <div class="card-body">
                             <h3 class="card-title"><span id="title"></span></h3>
                             <p class="card-text"><span id="about2"></span></p>
+                            <div class="card-photo"><span id="photo2"></span></p>
+                            <br>
                             <a href="/" class="btn btn-secondary btn-md">. r u n . h o m e . j a c k .</a>
                         </div>
-                        <div class="card-footer text-muted">
+                        <br>
                         </div>
+                        <div class="card-footer text-muted" id="footer">
                     </div>
             </div>
         </div>
@@ -63,9 +66,9 @@
                     <input type="text" id="about" class="form-control" aria-label="Sizing example, input" aria-describedby="inputGroup-sizing-default">
                 </div>
                 <br>
-                <div class="input-group">
+                <!-- <div class="input-group">
                     <div class="input-group-prepend">
-                      <span class="input-group-text" id="inputGroup-sizing-default">Upload Photo</span>
+                      <span class="input-group-text" id="inputGroup-sizing-default">Upload Photo:</span>
                     </div>
                     <div class="custom-file">
                       <input type="file" class="custom-file-input" id="inputGroupFile01"
@@ -73,7 +76,7 @@
                       <label class="custom-file-label" for="inputGroupFile01"></label>
                     </div>
                 </div>
-                <br>
+                <br> -->
                 <h3>Question 1:</h3>
                 <p>How likely are you to eat McDonalds at 1:00 AM? (1 being "not likely" & 5 being "always")</p>
                 <div class="form-group">
@@ -196,7 +199,6 @@
                 <br>
                 <br>
                 <button type="button" id="submit" class="btn btn-secondary btn-lg">. submit .</button>
-
             </div>
         </div>
     </div>
@@ -216,10 +218,12 @@ $("#submit").on("click", function(event) {
 
     event.preventDefault();
 
+
 var newMusician =
 {
     name: $("#name").val().trim(),
     about: $("#about").val().trim(),
+    // photo: $("#inputGroupFile01").val(),
     options: [ $("#exampleFormControlSelect1").val(), $("#exampleFormControlSelect2").val(), $("#exampleFormControlSelect3").val(), $("#exampleFormControlSelect4").val(), $("#exampleFormControlSelect5").val(), $("#exampleFormControlSelect6").val(), $("#exampleFormControlSelect7").val(), $("#exampleFormControlSelect8").val(), $("#exampleFormControlSelect9").val(), $("#exampleFormControlSelect10").val()],
 };
 
@@ -229,9 +233,13 @@ $("#main").hide();
 $.post("/api/musicians", newMusician, function(data) {
 
 if (data) {
-$("#title").text(data.name);
-$("#about2").text(data.about)
-}
+
+    $("#title").text(data.name);
+    $("#about2").text(data.about);
+    $("#photo2").html('<img src="' + data.photo + '" id="profile" >');
+
+
+};
 
 
 });
